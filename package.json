@@ -1,9 +1,9 @@
 {
   "name": "license-plate-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "移动端车牌输入",
   "private": false,
-  "keywords": ["车牌输入"],
+  "keywords": ["车牌输入", "车牌", "license-plate", "license-plate-input"],
   "main": "dist/license-plate-input.js",
   "module": "dist/license-plate-input.es.js",
   "license": "MIT",
@@ -11,6 +11,10 @@
     "dist/*",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuxiaohui1218/license-plate-input"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
