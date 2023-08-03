@@ -1,0 +1,194 @@
+*{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: 0;
+}
+div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+html, body{
+    border:0;
+    vertical-align:baseline;
+    background:#f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+:focus {
+	outline: 1;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+div{box-sizing: border-box;}
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    color: #333;
+}
+a:visited,a:link{color: #333;}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input[type=search]::-webkit-search-cancel-button{
+    -webkit-appearance: none;/*此处只是去掉默认的小×*/
+}
+img{max-width: 100%;vertical-align: top;}
+input, select {
+    vertical-align:middle;border: none;
+}
+.ellipsis {overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
+.ellipsis2{
+    display:-webkit-box;
+    overflow:hidden;
+    white-space:normal!important;
+    text-overflow:ellipsis;
+    word-wrap:break-word;
+    -webkit-line-clamp:2;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+}
+.row-start-center {
+    display: flex;
+    align-items: center;
+}
+.row-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row-between-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row-around-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.row-end-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.row-between-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.row-between-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.row-center-end {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.row-start-end {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.col-start-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.col-center-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-between-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.col-center-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex-auto {
+    flex: auto;
+}
+.flex-none {
+    flex: none;
+}
