@@ -6,5 +6,8 @@ function confirm(v) {
 </script>
 
 <template>
-    <LicensePlateInput @confirm="confirm"></LicensePlateInput>
+    <LicensePlateInput
+        @confirm="confirm"
+        page-name="车牌录入"
+    ></LicensePlateInput>
 </template>

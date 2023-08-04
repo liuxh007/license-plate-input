@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/liuxiaohui1218/license-plate-input"
+    "url": "https://github.com/liuxh007/license-plate-input"
   },
   "scripts": {
     "dev": "vite",

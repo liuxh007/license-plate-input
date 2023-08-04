@@ -1,7 +1,7 @@
 <template>
     <div class="containers">
         <div class="parking-box">
-            {{ gasStationName }}
+            {{ pageName }}
         </div>
         <div class="car_input_box">
             <div>请输入正确的车牌</div>
@@ -175,8 +175,13 @@ const englishKeyOneList =ref('ABCDEFGHJKLMNPQRSTUV')
 const englishKeyTwoList =ref('WXYZ')
 const trailerFiledIsDis =ref(true)
 const activeNum =ref( 0)
-const gasStationName =ref('车牌录入')
-
+defineProps({
+    // 页面名称
+    pageName: {
+        default: '车牌录入',
+        type: String
+    }
+})
 
 watch(() => carNumber.value.length, () => {
     setTrailerKeyboardDis()
@@ -191,19 +196,16 @@ function submit() {
     const carCardD = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
     let carPlate = carNumber.value.join('')
     if (carNumber.value.length === 0) {
-        // this.$toast('请输入车牌号')
         error.value = '请输入车牌号'
         return;
     }
     if (!carCardP.test(carPlate) && (currentIndex.value === 0)) {
         // 普通车
-        // this.$toast('车牌号输入有误')
         error.value = '车牌号输入有误'
         return;
     }
     if (!carCardD.test(carPlate) && currentIndex.value === 1) {
         // 新能源
-        // this.$toast('车牌号输入有误')
         error.value = '车牌号输入有误'
         return;
     }
@@ -319,7 +321,7 @@ function backspace() {
 .parking-box {
   width: 100%;
   height: 177px;
-  background: linear-gradient(180deg, #11B690 0%, #11B690 100%);
+  background: linear-gradient(180deg, #11B690 0%, #299f84 100%);
   font-size: 22px;
   font-weight: 600;
   color: #FFFFFF;
@@ -416,15 +418,6 @@ function backspace() {
   border-radius: 1px;
   animation: fade 1500ms infinite;
   -webkit-animation: fade 1500ms infinite;
-}
-
-.car_type_box {
-  display: flex;
-  justify-content: start;
-  width: 195px;
-  margin: 0 auto;
-
-
 }
 
 .car_type_item {
@@ -541,35 +534,6 @@ function backspace() {
   margin: 8px 12px;
 }
 
-.add_car_box {
-  width: calc(100% - 32px);
-  height: 40px;
-  background: linear-gradient(180deg, #DF4270, #F299AB);
-  border-radius: 20px;
-  margin: 0 auto;
-
-
-}
-
-.add_car {
-  height: 100%;
-  line-height: 40px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #FFFFFF;
-  text-align: center;
-}
-
-.dis_car {
-  height: 100%;
-  line-height: 40px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #FFFFFF;
-  background: #999999;
-  text-align: center;
-  border-radius: 40px;
-}
 
 .keyboard-content {
   width: 100%;
@@ -661,29 +625,11 @@ function backspace() {
   background: #AAADB7;
 }
 
-.sure {
-  width: 50px;
-  height: 42px;
-  text-align: center;
-  background-color: #AFB2BC;
-  border-radius: 4px;
-  position: absolute;
-  right: 5px;
-  bottom: 15px;
-  justify-content: center;
-  align-items: center;
-}
-
 .default_dot {
   width: 4px;
   height: 4px;
   background: #333333;
   margin: 0 2px;
-}
-
-.del-con {
-  width: 22px;
-  height: 16px;
 }
 
 .jus-center {
@@ -699,10 +645,6 @@ function backspace() {
 .active_car {
   border-radius: 2px;
   border: 1px solid #375DE9;
-}
-
-.province-mr {
-  margin-right: 5px;
 }
 
 .confirm_btn {
@@ -734,18 +676,6 @@ function backspace() {
   text-align: center;
   background-color: #fff;
 }
-
-.confirm-cash-box {
-  width: 100vh;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 99;
-}
-
 .cash-box {
   width: 285px;
   //height: 300px;
@@ -754,42 +684,5 @@ function backspace() {
   margin: 30vh auto 0;
   text-align: center;
   min-height: 100px;
-}
-
-.cash-title {
-  font-size: 17px;
-  font-weight: 500;
-  color: #000000;
-  padding-top: 19px;
-  margin: 0 0 12px;
-}
-
-.content-cash {
-  font-size: 13px;
-  font-weight: 500;
-  color: #000000;
-  margin-bottom: 27px;
-  padding: 0 16px;
-}
-
-.line-cash {
-  width: 100%;
-  height: 1px;
-  background: rgba(60, 60, 67, 0.29);
-}
-
-.cancel-box {
-  width: 100%;
-  height: 44px;
-  line-height: 44px;
-  color: #11B690;
-  font-size: 16px;
-  text-align: center;
-}
-
-.flex-btwn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 </style>
